@@ -1,0 +1,23 @@
+{
+  "name": "majuli-commerce",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --filter=@repo/web",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "db:generate": "pnpm --filter @repo/db db:generate",
+    "db:validate": "pnpm --filter @repo/db db:validate",
+    "db:migrate:dev": "pnpm --filter @repo/db db:migrate:dev",
+    "db:seed": "pnpm --filter @repo/db db:seed"
+  },
+  "devDependencies": {
+    "prettier": "3.7.4",
+    "turbo": "2.10.6",
+    "typescript": "5.9.2"
+  }
+}
